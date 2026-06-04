@@ -18,7 +18,7 @@ HERO_GRADIENT = (
 ACCENT = "text-fuchsia-300"
 
 HOME_HERO = "images/hero-st-maarten.png"
-HOME_HERO_ALT = "Aircraft landing over Maho Beach in St Maarten"
+HOME_HERO_ALT = "Aerial view of Philipsburg bay and turquoise waters in St Maarten"
 BEST_IMG = "images/best-st-maarten-excursions.png"
 BEST_ALT = "Best St Maarten shore excursions including beaches sailing and island tours"
 PORT_IMG = "images/st-maarten-cruise-port.png"

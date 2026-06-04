@@ -11,27 +11,24 @@ IMAGES = ROOT / "images"
 
 # Site-provided; skipped by fetch (see images/ATTRIBUTION.md).
 CUSTOM_IMAGES: frozenset[str] = frozenset({
+    "hero-st-maarten.png",
     "st-maarten-cruise-port.png",
     "orient-beach-hero.png",
     "st-maarten-faq.png",
+    "catamaran-sailing.png",
+    "maho-beach-hero.png",
 })
 
 DOWNLOADS: list[tuple[str, str, int]] = [
-    ("hero-st-maarten.png", "WOyBhxyB8KI", 1920),
-    ("maho-beach-hero.png", "0tfft7RaI_s", 1920),
     ("best-st-maarten-excursions.png", "WOyBhxyB8KI", 1920),
-    ("st-maarten-cruise-port.png", "PCLabewO7eE", 1920),
     ("one-day-st-maarten.png", "YZ8Jc6TiH2A", 1920),
-    ("orient-beach-hero.png", "BUIEgc7J0eo", 1920),
     ("st-maarten-snorkelling.png", "uTgKYNhuKOk", 1920),
     ("st-maarten-island-tours.png", "PsgyWVeJjOA", 1920),
     ("st-maarten-atv-buggy.png", "eXV74Ia7Log", 1920),
     ("dutch-french-side.png", "bHavJvvmcAU", 1920),
-    ("catamaran-sailing.png", "vYXrNeIpm3w", 1920),
     ("st-maarten-private-tours.png", "PsgyWVeJjOA", 1920),
     ("st-maarten-family.png", "BUIEgc7J0eo", 1920),
     ("st-maarten-beaches.png", "Q0HR_nrDkB8", 1920),
-    ("st-maarten-faq.png", "PCLabewO7eE", 1920),
     ("st-maarten-intro.png", "vYXrNeIpm3w", 1920),
 ]
 

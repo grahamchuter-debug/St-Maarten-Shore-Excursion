@@ -6,7 +6,7 @@ import json
 ROOT = Path(__file__).resolve().parent.parent
 DOMAIN = "https://stmaartenshoreexcursion.com"
 SITE = "St Maarten Shore Excursion"
-DATE = "2026-06-04"
+DATE = "2026-09-04"
 FONTS = (
     "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700"
     "&family=Source+Sans+3:wght@400;500;600;700&display=swap"
@@ -78,7 +78,7 @@ def page_shell(
     trust_attr = '\n  data-trust-strip="partials/trust-strip.html"' if trust else ""
     content_file = content if content.startswith("content/") else f"content/{content}"
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -289,7 +289,7 @@ def _snapshot_default(**overrides: str) -> str:
         best_for="Maho Beach, Orient Beach, sailing, island tours",
         activity_level="Varies — see comparison",
         family="Excellent with age-appropriate picks",
-        return_ship="Operators usually allow 60–90 min buffer",
+        return_ship="Build your own buffer; confirm operator return plan",
         popular="Maho Beach, Orient Beach, catamaran, island drive",
     )
     defaults.update(overrides)
@@ -397,7 +397,7 @@ def _content_best() -> str:
     snap = _snapshot_default(best_for="Comparing all excursion types", popular="See comparison table below")
     return f"""<section class="pt-8 pb-4 bg-white"><div class="max-w-3xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-display font-bold text-gray-900 mb-4">Best St Maarten Shore Excursions</h2>
-      <p class="text-gray-600 leading-relaxed text-sm">Operators meet at <strong>Philipsburg cruise terminals</strong> and plan returns with buffer before all aboard.</p>
+      <p class="text-gray-600 leading-relaxed text-sm">Operators meet at <strong>Philipsburg cruise terminals</strong> and typically plan a return window before all aboard — confirm details and build your own buffer.</p>
     </div></section>
     <section class="pb-8 bg-white"><div class="max-w-7xl mx-auto px-4">{snap}</div></section>
     {_comparison_section()}
@@ -424,7 +424,7 @@ def _content_port() -> str:
       </div>
       <div class="grid lg:grid-cols-2 gap-6 text-sm">
         <div class="bg-white rounded-3xl p-6 border border-sxm-100"><h3 class="font-display font-bold text-lg mb-2">Philipsburg Terminals</h3><p class="text-gray-600">Dr. A.C. Wathey Cruise &amp; Cargo Facilities place you steps from Front Street duty-free shops, taxis and shore-excursion desks.</p></div>
-        <div class="bg-white rounded-3xl p-6 border border-sxm-100"><h3 class="font-display font-bold text-lg mb-2">Getting To Beaches</h3><p class="text-gray-600">Maho Beach is 15–20 minutes west; Orient Beach on the French side is 25–35 minutes by taxi or organised transfer.</p></div>
+        <div class="bg-white rounded-3xl p-6 border border-sxm-100"><h3 class="font-display font-bold text-lg mb-2">Getting To Beaches</h3><p class="text-gray-600">Maho Beach is typically about 15–25 minutes west by road — traffic varies. Orient Beach on the French side is often 25–45 minutes depending on congestion and your pickup point.</p></div>
       </div>
     </div></section>
     <section class="py-12 bg-white"><div class="max-w-7xl mx-auto px-4">
@@ -451,7 +451,7 @@ def _content_one_day() -> str:
         <li class="flex gap-4 bg-white rounded-2xl p-5 border border-sxm-100"><span class="font-bold text-ocean-600 shrink-0">09:30</span><div><strong>Maho Beach or catamaran sail</strong><p class="text-gray-600 mt-1">Choose plane spotting or a half-day sail with snorkel — both are cruise favourites.</p></div></li>
         <li class="flex gap-4 bg-white rounded-2xl p-5 border border-sxm-100"><span class="font-bold text-ocean-600 shrink-0">13:00</span><div><strong>Orient Beach or island tour</strong><p class="text-gray-600 mt-1">French-side beach lunch or Dutch &amp; French highlights drive if energy allows.</p></div></li>
         <li class="flex gap-4 bg-white rounded-2xl p-5 border border-sxm-100"><span class="font-bold text-ocean-600 shrink-0">15:30</span><div><strong>Philipsburg stroll</strong><p class="text-gray-600 mt-1">Front Street shopping and waterfront cafés near the pier before return buffer.</p></div></li>
-        <li class="flex gap-4 bg-white rounded-2xl p-5 border border-sxm-100"><span class="font-bold text-ocean-600 shrink-0">17:00</span><div><strong>Back at ship</strong><p class="text-gray-600 mt-1">Allow margin before published all-aboard.</p></div></li>
+        <li class="flex gap-4 bg-white rounded-2xl p-5 border border-sxm-100"><span class="font-bold text-ocean-600 shrink-0">17:00</span><div><strong>Back at ship</strong><p class="text-gray-600 mt-1">Build your own buffer before published all-aboard — confirm times with your ship and operator.</p></div></li>
       </ol>
       <div class="mt-10">{_internal_links()}</div>
     </div></section>"""
@@ -459,12 +459,12 @@ def _content_one_day() -> str:
 
 def _content_maho() -> str:
     return _content_excursion_page(
-        "Maho Beach sits at the end of Princess Juliana International Airport runway — jets pass metres overhead before touching down. Cruise excursions include transport, beach time and a fixed return to Philipsburg pier.",
+        "Maho Beach sits at the end of Princess Juliana International Airport runway — when aircraft are moving, landings can pass metres overhead. Cruise excursions usually include transport, beach time and a timed return window to Philipsburg pier — confirm details with the operator. Aircraft movements vary by day; treat plane sightings as possible, not a guaranteed show.",
         [
-            "Morning visits align with busier arrival schedules on many ship days.",
+            "Flight activity changes with airline schedules, weather and airport operations — do not plan the day around a specific landing time.",
             "Stay behind fence lines and follow crew safety briefings near the runway.",
             "Sunset Bar area offers food and drinks with runway views.",
-            "Pair with afternoon Orient Beach only on long port calls.",
+            "Pair with afternoon Orient Beach only on long port calls, with your own return buffer.",
         ],
         dict(
             best_for="Plane spotters and bucket-list beach fans",
@@ -554,9 +554,9 @@ def _content_atv() -> str:
 
 def _content_dutch_french() -> str:
     return _content_excursion_page(
-        "Dutch and French side tours highlight St Maarten's split personality — duty-free Philipsburg, colourful Marigot, border monuments and beaches on both coasts. Guides explain currency, language and customs as you cross the open border.",
+        "Dutch and French side tours highlight St Maarten's split personality — duty-free Philipsburg, colourful Marigot, border monuments and beaches on both coasts. Guides explain currency, language and everyday differences as you move between sides. For ordinary day movement the land border is typically open and low-friction — do not invent passport drama for a standard cruise excursion.",
         [
-            "No passport required for day visits between sides for most nationalities.",
+            "Day sightseeing between Dutch St Maarten and French St Martin is usually straightforward for cruise visitors; carry ID if your operator asks.",
             "Marigot offers French cafés and market shopping.",
             "Philipsburg suits quick pier-side shopping on return.",
             "Often combined with Maho or Orient Beach photo stops.",
@@ -592,12 +592,12 @@ def _content_catamaran() -> str:
 
 def _content_private() -> str:
     return _content_excursion_page(
-        "Private SUVs, vans and charter boats let your group set the pace — Maho Beach first, Orient lunch, snorkel bay and Marigot market in one custom loop. Drivers serving cruise guests understand all-aboard deadlines.",
+        "Private SUVs, vans and charter boats let your group set the pace — Maho Beach first, Orient lunch, snorkel bay and Marigot market in one custom loop. Drivers serving cruise guests usually plan around all-aboard — still confirm return timing in writing.",
         [
             "Split cost across families to rival per-person coach pricing.",
             "Share priorities when booking — routes are flexible.",
             "Ideal for mixed mobility within one group.",
-            "Confirm return time in writing before payment.",
+            "Confirm return time in writing before payment and build your own buffer.",
         ],
         dict(
             best_for="Groups wanting custom pacing",
@@ -656,15 +656,15 @@ def _content_faq() -> str:
     return f"""<section class="pb-8 bg-white"><div class="max-w-7xl mx-auto px-4">{snap}</div></section>
     <section class="py-8 bg-white"><div class="max-w-3xl mx-auto px-4 space-y-4">
       <details class="faq-item rounded-2xl border border-sxm-100 p-5"><summary class="font-semibold text-gray-900 cursor-pointer">How long do cruise ships stay in Philipsburg?</summary>
-        <p class="mt-4 text-sm text-gray-500">Most Philipsburg calls are 8 to 10 hours. A Maho Beach morning plus Orient Beach or catamaran sail fits comfortably with return buffer.</p></details>
+        <p class="mt-4 text-sm text-gray-500">Most Philipsburg calls are 8 to 10 hours. A Maho Beach morning plus Orient Beach or catamaran sail can fit when you leave a sensible return window — confirm your ship’s times.</p></details>
       <details class="faq-item rounded-2xl border border-sxm-100 p-5"><summary class="font-semibold text-gray-900 cursor-pointer">Is Maho Beach safe for cruise passengers?</summary>
-        <p class="mt-4 text-sm text-gray-500">Yes when you stay behind marked barriers and follow operator briefings. Jet blast from departing aircraft is dangerous — never stand on the fence line during takeoffs.</p></details>
+        <p class="mt-4 text-sm text-gray-500">Yes when you stay behind marked barriers and follow operator briefings. Jet blast from departing aircraft is dangerous — never stand on the fence line during takeoffs. Aircraft timing is not promised.</p></details>
       <details class="faq-item rounded-2xl border border-sxm-100 p-5"><summary class="font-semibold text-gray-900 cursor-pointer">What is the difference between the Dutch and French sides?</summary>
-        <p class="mt-4 text-sm text-gray-500">Dutch St Maarten uses the guilder and English widely; French St Martin uses euros and French. The open border lets island tours cover both in one port day.</p></details>
+        <p class="mt-4 text-sm text-gray-500">Dutch St Maarten uses the guilder and English widely; French St Martin uses euros and French. For ordinary day movement the land border is typically open, so island tours can cover both in one port day without inventing heavy border-control theatre.</p></details>
       <details class="faq-item rounded-2xl border border-sxm-100 p-5"><summary class="font-semibold text-gray-900 cursor-pointer">Orient Beach or Maho Beach for a port day?</summary>
-        <p class="mt-4 text-sm text-gray-500">Maho Beach is iconic for aircraft landings and a shorter visit; Orient Beach suits a longer swim-and-lunch French-side day. Many guests do Maho in the morning and Orient or a catamaran later.</p></details>
+        <p class="mt-4 text-sm text-gray-500">Maho Beach is iconic for possible aircraft landings and a shorter visit; Orient Beach suits a longer swim-and-lunch French-side day. Many guests do Maho in the morning and Orient or a catamaran later — flight activity still varies.</p></details>
       <details class="faq-item rounded-2xl border border-sxm-100 p-5"><summary class="font-semibold text-gray-900 cursor-pointer">Ship excursion or book independently?</summary>
-        <p class="mt-4 text-sm text-gray-500">Ship tours guarantee the vessel waits if the operator is late. Reputable St Maarten operators plan returns with buffer — confirm policies and read reviews before booking ashore.</p></details>
+        <p class="mt-4 text-sm text-gray-500">Ship-sold tours often include a wait-if-late policy from the cruise line. Independent operators typically plan a return window — confirm policies, build your own buffer, and do not cut it fine.</p></details>
       {_internal_links()}
     </div></section>"""
 
@@ -689,7 +689,7 @@ def _faq_schema() -> dict:
         ),
         (
             "Ship excursion or book independently?",
-            "Ship tours guarantee wait-if-late; reputable locals plan buffer returns.",
+            "Ship-sold tours often include wait-if-late; confirm independent operator policies and build your own buffer.",
         ),
     ]
     return {
@@ -1178,10 +1178,13 @@ def main() -> None:
   "name": "st-maarten-shore-excursion",
   "private": true,
   "scripts": {
-    "build": "python3 scripts/build-st-maarten-site.py",
-    "images": "python3 scripts/fetch-st-maarten-images.py",
+    "sync:schedules": "node scripts/sync-schedules.mjs",
+    "qa:schedules": "node scripts/qa-schedules.mjs",
+    "build": "python3.14 scripts/build-st-maarten-site.py && python3.14 scripts/world2_extend_st_maarten.py && python3.14 scripts/generate_schedule_pages.py",
+    "build:all": "npm run sync:schedules && npm run qa:schedules && npm run build",
+    "images": "python3.14 scripts/fetch-st-maarten-images.py",
     "deploy": "wrangler deploy",
-    "preview": "python3 -m http.server 8903"
+    "preview": "python3.14 -m http.server 8903"
   },
   "devDependencies": {
     "wrangler": "^4.94.0"
@@ -1190,6 +1193,7 @@ def main() -> None:
 """,
     )
 
+    # Domain may already be attached in Cloudflare; prefer workers_dev for local hygiene.
     write(
         "wrangler.jsonc",
         """{
@@ -1198,12 +1202,7 @@ def main() -> None:
   "compatibility_date": "2026-06-04",
   "observability": { "enabled": true },
   "assets": { "directory": "." },
-  "routes": [
-    {
-      "pattern": "stmaartenshoreexcursion.com",
-      "custom_domain": true
-    }
-  ]
+  "workers_dev": true
 }
 """,
     )

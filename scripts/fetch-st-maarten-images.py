@@ -19,17 +19,19 @@ CUSTOM_IMAGES: frozenset[str] = frozenset({
     "maho-beach-hero.png",
 })
 
+# NEW photo IDs (2026-09) — distinct from Aruba and Cozumel attraction binaries.
+# Avoid Cozumel Mayan ruins (PsgyWVeJjOA) and jeep (bHavJvvmcAU), and prior shared slugs.
 DOWNLOADS: list[tuple[str, str, int]] = [
-    ("best-st-maarten-excursions.png", "WOyBhxyB8KI", 1920),
-    ("one-day-st-maarten.png", "YZ8Jc6TiH2A", 1920),
-    ("st-maarten-snorkelling.png", "uTgKYNhuKOk", 1920),
-    ("st-maarten-island-tours.png", "PsgyWVeJjOA", 1920),
-    ("st-maarten-atv-buggy.png", "eXV74Ia7Log", 1920),
-    ("dutch-french-side.png", "bHavJvvmcAU", 1920),
-    ("st-maarten-private-tours.png", "PsgyWVeJjOA", 1920),
-    ("st-maarten-family.png", "BUIEgc7J0eo", 1920),
-    ("st-maarten-beaches.png", "Q0HR_nrDkB8", 1920),
-    ("st-maarten-intro.png", "vYXrNeIpm3w", 1920),
+    ("best-st-maarten-excursions.png", "AxC1BwokQrQ", 1920),  # St Martin / Saint Martin aerial
+    ("one-day-st-maarten.png", "9XngoIpxcEo", 1920),  # Turquoise bay aerial
+    ("st-maarten-snorkelling.png", "5QgIuuBxKwM", 1920),  # Underwater snorkel
+    ("st-maarten-island-tours.png", "G85VuTpw6jg", 1920),  # Coastal scenery (not ruins)
+    ("st-maarten-atv-buggy.png", "L-2p8fapOA8", 1920),  # Adventure / off-road feel
+    ("dutch-french-side.png", "Oaqk7qqNh_c", 1920),  # Colourful Caribbean townscape
+    ("st-maarten-private-tours.png", "2FPjlAyMQTA", 1920),  # Distinct sightseeing
+    ("st-maarten-family.png", "p8Drpg_duLw", 1920),  # Beach day with people
+    ("st-maarten-beaches.png", "rDEOVtE7vOs", 1920),  # Tropical beach
+    ("st-maarten-intro.png", "7Z03R1wOdmI", 1920),  # Caribbean landscape intro
 ]
 
 

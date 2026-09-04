@@ -1,0 +1,16 @@
+{
+  "portSlug": "st-maarten",
+  "destinationName": "St Maarten",
+  "domain": "https://stmaartenshoreexcursion.com",
+  "siteName": "St Maarten Shore Excursion",
+  "authoritySource": "../caribbean-shore-excursions/data/imported-schedules/st-maarten.json",
+  "localOutput": "data/generated/st-maarten-schedules.json",
+  "scheduleHubPath": "ship-schedule",
+  "portGuidePath": "st-maarten-cruise-port-guide.html",
+  "bestExcursionsPath": "best-st-maarten-shore-excursions.html",
+  "oneDayPath": "one-day-in-st-maarten.html",
+  "fontsCss": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap",
+  "expectedTotals": { "total": 728, "byYear": { "2026": 225, "2027": 503, "2028": 0 } },
+  "hubIntro": "Find your ship and date for St Maarten, then choose Dutch-side Philipsburg, French-side Orient Beach, Maho plane-spotting or island hopping around a realistic return buffer.",
+  "notes": "GENERATED FROM CARIBBEAN AUTHORITY — DO NOT MANUALLY EDIT schedule output files."
+}

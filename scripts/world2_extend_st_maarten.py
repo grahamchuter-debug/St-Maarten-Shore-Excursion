@@ -725,11 +725,11 @@ def write_package_json() -> None:
   "scripts": {
     "sync:schedules": "node scripts/sync-schedules.mjs",
     "qa:schedules": "node scripts/qa-schedules.mjs",
-    "build": "python3.14 scripts/build-st-maarten-site.py && python3.14 scripts/world2_extend_st_maarten.py && python3.14 scripts/generate_schedule_pages.py",
+    "build": "python3 scripts/build-st-maarten-site.py && python3 scripts/world2_extend_st_maarten.py && python3 scripts/generate_schedule_pages.py",
     "build:all": "npm run sync:schedules && npm run qa:schedules && npm run build",
-    "images": "python3.14 scripts/fetch-st-maarten-images.py",
+    "images": "python3 scripts/fetch-st-maarten-images.py",
     "deploy": "wrangler deploy",
-    "preview": "python3.14 -m http.server 8903"
+    "preview": "python3 -m http.server 8903"
   },
   "devDependencies": {
     "wrangler": "^4.94.0"
